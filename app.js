@@ -6,13 +6,17 @@ while (texto.length > 70) {
 
 console.log('Largo total (contando espacios en blanco): ' + texto.length);
 
-
-contador = 0;
-for(let i = 0; i < texto.length; i++) {
-    if (texto[i] !== " ") {
-        contador++;
+console.log('Largo total (sin contar espacio en blanco): ' + contarSinEspacios(texto));
+function contarSinEspacios(texto){
+    if (texto === undefined){
+        console.log("No se recibio ningun texto")
+        return;
     }
+    let contador = 0;
+    for(let i= 0; i <TextDecoder.length; i++){
+        if (texto[i] !== ""){
+            contador++
+        }
+    }
+    return contador
 }
-
-
-console.log('Largo total (sin contar espacio en blanco): ' + contador);
